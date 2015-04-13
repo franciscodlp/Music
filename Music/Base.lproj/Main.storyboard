@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaQ-pg-iKI">
+                                <rect key="frame" x="285" y="70" width="30" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playMusic:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="W9W-At-ZNs"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QdK-oQ-k4g">
+                                <rect key="frame" x="14" y="230" width="572" height="31"/>
+                                <connections>
+                                    <action selector="volumeSliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="QXj-iS-cJv"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3Q-FR-4Fo">
+                                <rect key="frame" x="284" y="130" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopMusic:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c64-bS-MV4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8U-tC-UBv">
+                                <rect key="frame" x="241" y="210" width="117.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8U-PB-Zbl">
+                                <rect key="frame" x="279" y="100" width="43" height="30"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseMusic:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gDd-3U-tfV"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aPm-0l-5wP">
+                                <rect key="frame" x="14" y="180" width="572" height="31"/>
+                                <connections>
+                                    <action selector="timeSliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="iwZ-xr-und"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-0s-xZm">
+                                <rect key="frame" x="251" y="160" width="98.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jev-3n-eYM">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="sCx-jL-Ep4">
+                                        <connections>
+                                            <action selector="playBarButton:" destination="vXZ-lx-hvc" id="jbu-Oa-WGJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="s7L-It-zWy"/>
+                                    <barButtonItem systemItem="pause" id="RtB-Sv-5b1">
+                                        <connections>
+                                            <action selector="pauseBarButton:" destination="vXZ-lx-hvc" id="UJz-tF-jvD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HGC-lu-Cjp"/>
+                                    <barButtonItem title="Stop" id="feO-n2-1V2">
+                                        <connections>
+                                            <action selector="stopBarButton:" destination="vXZ-lx-hvc" id="hbT-hv-LGg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jww-rP-aDm">
+                                <rect key="frame" x="180" y="270" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="rci-hy-6YR"/>
+                                    <constraint firstAttribute="height" constant="240" id="uKh-V4-0Ub"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aPm-0l-5wP" firstAttribute="top" secondItem="F3Q-FR-4Fo" secondAttribute="bottom" constant="20" id="4hb-f0-eUB"/>
+                            <constraint firstItem="Jev-3n-eYM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5ec-ob-avr"/>
+                            <constraint firstItem="F3Q-FR-4Fo" firstAttribute="top" secondItem="w8U-PB-Zbl" secondAttribute="bottom" id="6wH-zn-EzP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jev-3n-eYM" secondAttribute="trailing" constant="-16" id="75M-rb-dCQ"/>
+                            <constraint firstAttribute="centerX" secondItem="B9R-0s-xZm" secondAttribute="centerX" id="9aR-02-WpD"/>
+                            <constraint firstAttribute="centerX" secondItem="Jev-3n-eYM" secondAttribute="centerX" id="9g4-67-GYD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Jev-3n-eYM" secondAttribute="bottom" id="Ebg-zR-TCQ"/>
+                            <constraint firstItem="GaQ-pg-iKI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="I64-fh-Gze"/>
+                            <constraint firstItem="aPm-0l-5wP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Pwa-zc-y3I"/>
+                            <constraint firstItem="QdK-oQ-k4g" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="QZT-03-5JW"/>
+                            <constraint firstItem="QdK-oQ-k4g" firstAttribute="top" secondItem="Q8U-tC-UBv" secondAttribute="bottom" id="Y2s-y5-fvh"/>
+                            <constraint firstAttribute="centerX" secondItem="QdK-oQ-k4g" secondAttribute="centerX" id="aSB-0t-60R"/>
+                            <constraint firstAttribute="centerX" secondItem="aPm-0l-5wP" secondAttribute="centerX" id="acD-h1-OQK"/>
+                            <constraint firstAttribute="centerX" secondItem="F3Q-FR-4Fo" secondAttribute="centerX" id="cbG-vn-wQf"/>
+                            <constraint firstAttribute="centerX" secondItem="Q8U-tC-UBv" secondAttribute="centerX" id="hfU-pY-GOb"/>
+                            <constraint firstItem="jww-rP-aDm" firstAttribute="top" secondItem="QdK-oQ-k4g" secondAttribute="bottom" constant="10" id="kTH-6t-Wyy"/>
+                            <constraint firstItem="QdK-oQ-k4g" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="kYA-Au-X88"/>
+                            <constraint firstAttribute="centerX" secondItem="jww-rP-aDm" secondAttribute="centerX" id="m1U-rf-TFG"/>
+                            <constraint firstItem="w8U-PB-Zbl" firstAttribute="top" secondItem="GaQ-pg-iKI" secondAttribute="bottom" id="nDC-2n-ZgF"/>
+                            <constraint firstItem="B9R-0s-xZm" firstAttribute="top" secondItem="F3Q-FR-4Fo" secondAttribute="bottom" id="p8Y-H1-B0f"/>
+                            <constraint firstAttribute="centerX" secondItem="w8U-PB-Zbl" secondAttribute="centerX" id="pvX-ew-Dhc"/>
+                            <constraint firstItem="Q8U-tC-UBv" firstAttribute="top" secondItem="aPm-0l-5wP" secondAttribute="bottom" id="qtx-Ge-tYy"/>
+                            <constraint firstAttribute="centerX" secondItem="GaQ-pg-iKI" secondAttribute="centerX" id="tO2-jS-BY7"/>
+                            <constraint firstItem="aPm-0l-5wP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="vHG-9f-2vS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumCover" destination="jww-rP-aDm" id="24O-rh-siS"/>
+                        <outlet property="timeControlSlider" destination="aPm-0l-5wP" id="TvI-ok-Up6"/>
+                        <outlet property="volumeControlSlider" destination="QdK-oQ-k4g" id="Q5a-KH-RV5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
